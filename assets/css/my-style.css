@@ -1,0 +1,40 @@
+.column-stack {
+    /*background: rgba(252, 213, 53, 0.7);*/
+    border-radius: 10px;
+}
+
+.block-stack {
+    border-radius:20px;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 2px solid black;
+    padding: 15px;
+    color:black;
+    text-align: center;
+    display:block;
+    font-weight: bold;
+}
+
+.block-stack img{
+    max-width: 100%;
+    max-height: 80%;
+    display:block;
+    margin:auto;
+    text-align: center;
+}
+
+.select-about-plan {
+    background: #fcd535;
+    background-image: linear-gradient(to right, #fcd535, #eec317, #eec317, #fcd535);
+    padding:10px 25px;
+    border-radius: 50px;
+    color:white;
+    border:none;
+    font-size:14px;
+    text-transform: uppercase;
+    text-align:center;
+    cursor:pointer;
+    margin-top:15px;
+    appearance: button;
+}
