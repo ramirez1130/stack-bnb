@@ -1,6 +1,6 @@
 var RingBNB = artifacts.require("./contracts/New333.sol");
 
-var account = '0xc5cB6FeA4eF82A63Cb2092e26b30f57c0538823f';
+var account = '0x7a687ff7978280eDFc18beA97a5bAdabee2a0a8a';
 
 module.exports = function(deployer) {
   deployer.deploy(RingBNB,account, account, account);

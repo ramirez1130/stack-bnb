@@ -40,6 +40,29 @@
 /*=====================
     01.General CSS start
 ==========================*/
+.footer-tec{
+  background-color:#333;
+  padding-top: 25px;
+  padding-bottom:25px;
+}
+
+.footer-tec img {
+  margin:0 50px;
+}
+
+.explain-contract {
+  color:black;
+  text-decoration: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.explain-contract:hover {
+  color: #fcd535;
+  font-weight: bold;
+}
+
 .blog-bradcrumb li, .blog-bradcrumb li a {
   display: inline-block;
   font-size: 13px;

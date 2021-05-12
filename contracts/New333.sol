@@ -72,21 +72,20 @@ contract New333 {
     }
 
     function _initPlans() private{
-        plan2amount[1] = 0.25 ether;
-        plan2amount[2] = 0.5 ether;
-        plan2amount[3] = 1 ether;
-        plan2amount[4] = 5 ether;
-        plan2amount[5] = 10 ether;
-        plan2amount[6] = 50 ether;
+        plan2amount[0] = 0.25 ether;
+        plan2amount[1] = 0.5 ether;
+        plan2amount[2] = 1 ether;
+        plan2amount[3] = 5 ether;
+        plan2amount[4] = 10 ether;
+        plan2amount[5] = 50 ether;
         
         deleteIndexZero();
-        createStack(0, 0, 0);
-        createStack(plan2amount[1], 0.6 ether, 1);
-        createStack(plan2amount[2], 1.25 ether, 2);
-        createStack(plan2amount[3], 2.5 ether, 3);
-        createStack(plan2amount[4], 12.5 ether, 4);
-        createStack(plan2amount[5], 25 ether, 5);
-        createStack(plan2amount[6], 125 ether, 6);
+        createStack(plan2amount[0], 0.6 ether, 0);
+        createStack(plan2amount[1], 1.25 ether, 1);
+        createStack(plan2amount[2], 2.5 ether, 2);
+        createStack(plan2amount[3], 12.5 ether, 3);
+        createStack(plan2amount[4], 25 ether, 4);
+        createStack(plan2amount[5], 125 ether, 5);
     }
 
     function withdraw(uint256 _plan, uint256 _stackId, uint256 _investmentId) public{
@@ -112,7 +111,7 @@ contract New333 {
 
     function invest(uint8 _plan, uint256 _referrer) public payable{
         require(msg.value == plan2amount[_plan], "The amount to be invested must be the one requested by the plan.");
-        require(_plan != 0, "Invalid plan id");
+        require(_plan < 6, "Invalid plan id");
 
         uint256 _investorId = address2index[msg.sender];
         uint256 _stackInvested;
@@ -155,7 +154,7 @@ contract New333 {
                 uint256 position = j+1;
                 Investment memory _invest = Investment(_plan, indexInvestment, _investorId, _stackId, block.timestamp, false, position);
                 index2Investment[indexInvestment] = _invest;
-                index2Investor[_investorId].investments[_plan-1] = indexInvestment;
+                index2Investor[_investorId].investments[_plan] = indexInvestment;
                 plan2Stacks[_plan][_stackId].investments[j] = indexInvestment;
                 indexInvestment++;
                 break;
@@ -172,12 +171,12 @@ contract New333 {
             investments : new uint[](3)
         });
         
+        plan2Stacks[0].push(stackCreated);
         plan2Stacks[1].push(stackCreated);
         plan2Stacks[2].push(stackCreated);
         plan2Stacks[3].push(stackCreated);
         plan2Stacks[4].push(stackCreated);
         plan2Stacks[5].push(stackCreated);
-        plan2Stacks[6].push(stackCreated);
     }
     
     function removeInvestmentToStack(uint256 _plan, uint256 _stackId, uint256 _investmentId) private{

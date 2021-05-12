@@ -5,7 +5,7 @@
         "price": 0.25,
         "investors" : 3,
         "velocity" : "fast",
-        "features": "<li>You will win <span>0.6 BNB</span><li>3 investors</li><li>Possible withdrawal speed: fast</li></li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25</li>",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#" ,
         "number" : 1
     },
@@ -15,7 +15,7 @@
         "price": 0.5,
         "investors" : 3,
         "velocity" : "medium",
-        "features": "<li>You will win <span>1.25 BNB</span><li>7 investors</li></li><li>Possible withdrawal speed: medium</li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25</li>",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#",
         "number" : 2
     },
@@ -25,7 +25,7 @@
         "price": 1,
         "investors" : 3,
         "velocity" : "slow",
-        "features": "<li>You will win <span>2.5 BNB</span><li>15 investors</li><li>Possible withdrawal speed: slow   </li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#",
         "number" : 3
     },
@@ -35,7 +35,7 @@
         "price": 5,
         "investors" : 3,
         "velocity" : "fast",
-        "features": "<li>You will win <span>12.5 BNB</span><li>3 investors</li><li>Possible withdrawal speed: fast</li></li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25</li>",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#",
         "number" : 4
     },
@@ -45,7 +45,7 @@
         "price": 10,
         "investors" : 3,
         "velocity" : "fast",
-        "features": "<li>You will win <span>25 BNB</span><li>3 investors</li><li>Possible withdrawal speed: fast</li></li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25</li>",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#",
         "number" : 5
     },
@@ -55,7 +55,7 @@
         "price": 50,
         "investors" : 3,
         "velocity" : "fast",
-        "features": "<li>You will win <span>125 BNB</span><li>3 investors</li><li>Possible withdrawal speed: fast</li></li><li>You can withdraw whenever you want</li><li>Withdrawal commission before the end of the ring %25</li>",
+        "features": "<li>You will win <span>0.6 BNB</span><li>Auto reinvestment when you withdraw profits</li></li><li>You can withdraw whenever you want</li>",
         "link": "#",
         "number" : 6
     }
