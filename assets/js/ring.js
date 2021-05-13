@@ -1,7 +1,8 @@
-var CONTRACT_ADDRESS = "0xaf9420AeaEA2fb932e9F9e0DC743Ed79E5A3D546";
-var CONTRACT_ABI = [{"inputs":[{"internalType":"address payable","name":"_developerAccount","type":"address"},{"internalType":"address payable","name":"_reserveAccount","type":"address"},{"internalType":"address payable","name":"_marketingAccount","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"},{"indexed":false,"internalType":"uint256","name":"plan","type":"uint256"}],"name":"onInvest","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"}],"name":"onNewbie","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"_indexRing","type":"uint256"}],"name":"onStackComplete","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"},{"indexed":false,"internalType":"uint256","name":"_stackId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_investmentId","type":"uint256"}],"name":"onWithdraw","type":"event"},{"constant":true,"inputs":[],"name":"DEVELOPER_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"MARKETING_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"MAX_INVESTORS","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"PENALTY_STEP","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"PERCENTS_DIVIDER","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"REFERRER_CODE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"RESERVE_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"address2index","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"developerAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"index2Investment","outputs":[{"internalType":"uint256","name":"plan","type":"uint256"},{"internalType":"uint256","name":"investmentId","type":"uint256"},{"internalType":"uint256","name":"investorId","type":"uint256"},{"internalType":"uint256","name":"stackId","type":"uint256"},{"internalType":"uint256","name":"investmentDate","type":"uint256"},{"internalType":"bool","name":"payed","type":"bool"},{"internalType":"uint256","name":"position","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"index2Investor","outputs":[{"internalType":"address payable","name":"addr","type":"address"},{"internalType":"uint256","name":"referrer","type":"uint256"},{"internalType":"uint256","name":"earningsReferrals","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"insuranceFunds","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"lastPayment","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"latestReferredCode","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"marketingAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"name":"plan2Stacks","outputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"reward","type":"uint256"},{"internalType":"uint256","name":"startDate","type":"uint256"},{"internalType":"bool","name":"finished","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint8","name":"","type":"uint8"}],"name":"plan2amount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"reserveAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalStaked","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_plan","type":"uint256"},{"internalType":"uint256","name":"_stackId","type":"uint256"},{"internalType":"uint256","name":"_investmentId","type":"uint256"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"uint8","name":"_plan","type":"uint8"},{"internalType":"uint256","name":"_referrer","type":"uint256"}],"name":"invest","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"uint8","name":"_plan","type":"uint8"},{"internalType":"uint256","name":"_stackId","type":"uint256"}],"name":"changeOnStack","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"_plan","type":"uint256"},{"internalType":"uint256","name":"_stackId","type":"uint256"}],"name":"getInfoStack","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"bool","name":"","type":"bool"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getActivePlans","outputs":[{"internalType":"bool[]","name":"","type":"bool[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getInvestedPlans","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getReferralInformation","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getContractBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getIndexInvestor","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getTotalStaked","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getInsuranceFunds","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
+var CONTRACT_ADDRESS = "0x61A0f5f058361DFBd88DB1C8A9F29cacD00A2040";
+var CONTRACT_ABI = [{"inputs":[{"internalType":"address payable","name":"_developerAccount","type":"address"},{"internalType":"address payable","name":"_reserveAccount","type":"address"},{"internalType":"address payable","name":"_marketingAccount","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"},{"indexed":false,"internalType":"uint256","name":"plan","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_stackInvested","type":"uint256"}],"name":"onInvest","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"}],"name":"onNewbie","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"_indexRing","type":"uint256"}],"name":"onStackComplete","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_address","type":"address"},{"indexed":false,"internalType":"uint256","name":"_plan","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_stackId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_investmentId","type":"uint256"}],"name":"onWithdraw","type":"event"},{"constant":true,"inputs":[],"name":"DEVELOPER_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"MARKETING_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"MAX_INVESTORS","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"PENALTY_STEP","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"PERCENTS_DIVIDER","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"REFERRER_CODE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"RESERVE_RATE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"address2index","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"developerAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"index2Investment","outputs":[{"internalType":"uint256","name":"plan","type":"uint256"},{"internalType":"uint256","name":"investmentId","type":"uint256"},{"internalType":"uint256","name":"investorId","type":"uint256"},{"internalType":"uint256","name":"stackId","type":"uint256"},{"internalType":"uint256","name":"investmentDate","type":"uint256"},{"internalType":"bool","name":"payed","type":"bool"},{"internalType":"uint256","name":"position","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"index2Investor","outputs":[{"internalType":"address payable","name":"addr","type":"address"},{"internalType":"uint256","name":"referrer","type":"uint256"},{"internalType":"uint256","name":"earningsReferrals","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"insuranceFunds","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"lastPayment","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"latestReferredCode","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"marketingAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"name":"plan2Stacks","outputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"reward","type":"uint256"},{"internalType":"uint256","name":"startDate","type":"uint256"},{"internalType":"bool","name":"finished","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint8","name":"","type":"uint8"}],"name":"plan2amount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"reserveAccount","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalStaked","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_plan","type":"uint256"},{"internalType":"uint256","name":"_stackId","type":"uint256"},{"internalType":"uint256","name":"_investmentId","type":"uint256"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"uint8","name":"_plan","type":"uint8"},{"internalType":"uint256","name":"_referrer","type":"uint256"}],"name":"invest","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"uint8","name":"_plan","type":"uint8"},{"internalType":"uint256","name":"_stackId","type":"uint256"}],"name":"changeOnStack","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"_plan","type":"uint256"},{"internalType":"uint256","name":"_stackId","type":"uint256"}],"name":"getInfoStack","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"bool","name":"","type":"bool"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getActivePlans","outputs":[{"internalType":"bool[]","name":"","type":"bool[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getInvestedPlans","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getReferralInformation","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getContractBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getIndexInvestor","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getTotalStaked","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getInsuranceFunds","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
 
 var currentAddr;
+var investorId;
 var contract = null;
 
 var gasPrice = '10000000000';
@@ -53,8 +54,11 @@ async function runAPP(){
     let networkID = await web3.eth.net.getId()
     contract = await new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS)
 
+    investorId = await contract.methods.getIndexInvestor().call({from:currentAddr});
+
     activatePlans();
     listenPlanInvested();
+    listenWithdraw();
     verifyMyPlans();
     updateStats();
     updatePriceBNB();
@@ -74,6 +78,7 @@ function verifyReferral() {
 }
 
 function reloadStack(plan) {
+  console.log(plan);
   $("#about .grafich-plan").not(`.grafich-plan-${plan}`).addClass('d-none');
   $(`#about .grafich-plan-${plan}`).removeClass('d-none');
 }
@@ -83,7 +88,7 @@ function changeStackInformation(infoStack, plan, stackId) {
 
   let startDate = new Date(infoStack[3]*1000).toJSON().slice(0,10);
   $("#about .button-stack-time").html(`You entered on ${startDate}`);
-  $("#about .title").html(`Your investment in <span>Plan ${plan}</span>`);
+  $("#about .title").html(`Your investment in <span>Plan ${parseInt(plan)+1}</span>`);
   $('#about .button-stack-id').html("Your invest ID is " + infoStack[2][infoStack[5]-1]);
   $('#about .button-stack-left').html(`${3 - cantInvestments} investments to complete stack`);
 
@@ -120,9 +125,8 @@ async function verifyMyPlans() {
       let first = true;
       response.map((stackId,plan) => {
         if (stackId != 0) {
-          plan = plan+1;
           if($('#about').hasClass('d-none')) $('#about').removeClass('d-none');
-          let stackView = `<div class='about-right ${plan !=1 ? 'd-none' : ''} grafich-plan grafich-plan-${plan}'></div>`;
+          let stackView = `<div class='about-right ${first ? 'd-none' : ''} grafich-plan grafich-plan-${plan}'></div>`;
           //get info of particular stack
           contract.methods.getInfoStack(plan,stackId).call({from:currentAddr}).then(infoStack => {
             console.log(infoStack);
@@ -137,7 +141,7 @@ async function verifyMyPlans() {
 
             $('#container-stack').append(stackView);
 
-            let optionPlan = $(`<option data-stack-plan=${plan} data-investment=${infoStack[2][infoStack[5]-1]}>Plan ${plan}</option>`).attr('value',stackId);
+            let optionPlan = $(`<option data-stack-plan=${plan} data-investment=${infoStack[2][infoStack[5]-1]}>Plan ${plan+1}</option>`).attr('value',stackId);
 
             selectOfPlans.append(optionPlan);
             $('#about .top-margin').prepend(selectOfPlans);
@@ -167,11 +171,11 @@ function changeOnStack(plan, stackId) {
 function listenPlanInvested() {
   if(contract) {
     contract.events.onInvest().on('data', async function(evt) {
-      let planInvested = evt.returnValues.plan;
+      let planInvested = parseInt(evt.returnValues.plan);
+      $(`#price [data-plan=${planInvested+1}]`).attr('disabled','disabled');
       $('#container-stack .about-right').remove();
       $('#about select[name=plan]').remove();
       verifyMyPlans();
-      $(`#price [data-plan=${planInvested}]`).attr('disabled','disabled');
     });
   }
 }
@@ -179,8 +183,12 @@ function listenPlanInvested() {
 function listenWithdraw() {
   if(contract) {
     contract.events.onWithdraw().on('data', async function(evt) {
-      let planInvested = evt.returnValues._plan;
-      $(`#price [data-plan=${planInvested}]`).removeAttr('disabled');
+      let planInvested = parseInt(evt.returnValues._plan);
+      console.log("witdrawal " + planInvested);
+      $(`#price [data-plan=${planInvested+1}]`).removeAttr('disabled');
+      $('#container-stack .about-right').remove();
+      $('#about select[name=plan]').remove();
+      verifyMyPlans();
     });
   }
 }
@@ -197,11 +205,11 @@ function activatePlans() {
         //Add event invest
         $(`#price [data-plan=${index}]`).on('click', function(){
           //Plan in contract is -1 because use the index of array
-          let plan = $(this).data("plan");
+          let plan = $(this).data("plan") - 1;
           let amount = window.web3.utils.toWei($(this).data("plan-amount").toString());
 
           if(contract) {
-            console.log(amount);
+            console.log(plan);
             let referralCode = $.urlParam('code');
             referralCode = referralCode != null ? referralCode : 0;
             contract.methods.invest(plan,referralCode).send({
@@ -320,11 +328,10 @@ $.getJSON("assets/js/plans.json", function(data) {
 
 //Button withdraw
 $('#about .container .top-margin button:contains(withdraw)').click(function(){
-  //Plan on contract is -1 because use the index of array
-  let plan = $(this).prev().find('option:selected').attr('data-stack-plan') - 1;
+  let plan = $(this).prev().find('option:selected').attr('data-stack-plan');
   let stackId = $(this).prev().val();
   let investmentId = $(this).prev().find('option:selected').attr('data-investment');
-  console.log(plan);
+  console.log(plan, stackId, investmentId);
   if(contract) {
     contract.methods.withdraw(plan, stackId, investmentId).send({from:currentAddr}).then(() => {
       iziToast.success({
@@ -360,7 +367,8 @@ function updateStats() {
 
     contract.methods.getContractBalance().call().then(response => {
       let value = window.web3.utils.fromWei(response, 'ether');
-      $('.contract-balance span').html(`${value} BNB`)
+      $('.contract-balance span').html(`${value} BNB`);
+      $('.contract-balance h3').html(`${value} BNB`);
     });
   }
 }
@@ -374,3 +382,21 @@ $.urlParam = function(name){
      return results[1] || 0;
   }
 }
+
+$('#mc-copy').click(function(e) {
+  e.preventDefault();
+  var $temp = $('<input>');
+  $('body').append($temp);
+  $temp.val($('#referral-code-input').attr('placeholder')).select();
+  document.execCommand("copy");
+  $temp.remove();
+  iziToast.success({
+    title: 'OK',
+    message: "Copy on clipboard!",
+    backgroundColor: '#fcd535',
+    position: 'bottomCenter',
+    progressBarColor: '#76BF73',
+    color:'.iziToast-#76BF73',
+    iconColor: '.iziToast-#76BF73'
+  });
+});

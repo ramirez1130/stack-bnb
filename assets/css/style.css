@@ -50,6 +50,16 @@
   margin:0 50px;
 }
 
+#referral-input {
+  border-radius: 50px;
+  padding:15px;
+  text-decoration: bold;
+}
+
+#button-copy {
+  width: 100%;
+}
+
 .explain-contract {
   color:black;
   text-decoration: bold;

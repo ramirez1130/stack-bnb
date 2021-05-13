@@ -58,8 +58,8 @@ contract New333 {
     }
 
     event onNewbie(address indexed _address);
-    event onInvest(address indexed _address, uint256 plan);
-    event onWithdraw(address indexed _address, uint256 _stackId, uint256 _investmentId);
+    event onInvest(address indexed _address, uint256 plan, uint256 _stackInvested);
+    event onWithdraw(address indexed _address, uint256 _plan, uint256 _stackId, uint256 _investmentId);
     event onStackComplete(uint256 _indexRing);
 
     constructor(address payable _developerAccount, address payable _reserveAccount, address payable _marketingAccount) public {
@@ -106,7 +106,7 @@ contract New333 {
         
         removeInvestmentToStack(_plan, _stackId, _investmentId);
 
-        emit onWithdraw(msg.sender, _stackId, _investmentId);
+        emit onWithdraw(msg.sender, _plan, _stackId, _investmentId);
     }
 
     function invest(uint8 _plan, uint256 _referrer) public payable{
@@ -145,7 +145,7 @@ contract New333 {
         totalStaked = totalStaked.add(plan2Stacks[_plan][_stackInvested].amount);
         latestReferredCode++;
         
-        emit onInvest(msg.sender, _plan);
+        emit onInvest(msg.sender, _plan, _stackInvested);
     }
     
     function _addInvest(uint256 _plan, uint256 _stackId, uint256 _investorId) private {
